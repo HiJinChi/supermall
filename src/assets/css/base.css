@@ -1,0 +1,50 @@
+/* 如果没使用安装normalize的方法，而是复制，粘贴，这里就需要下面这一步 */
+/* @import './normalize.css'
+/* root： 获取根元素html */
+/* root 这里定义了一些变量  var()使用他们 */
+:root {
+  --color-text: #666;
+  --color-high-text: #ff5777;
+  --color-tint: #ff8198;
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-height:1.5;
+
+}
+
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+  font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;;
+  /* 禁止用户鼠标在页面上选中文字，图片等 */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--color-background);
+}
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clear-fix {
+  zoom: 1;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
